@@ -46,7 +46,7 @@ resource "null_resource" "jumpbox-add" {
       "sudo usermod -aG docker ubuntu",
       "sleep 10",
       "sudo docker run -d --name web1 -p 80:80 itlinux/nginx-net-tools",
-      "sudo docker run -d --name web2 -p 81:80 itlinux/httpd-orange"
+      "sudo docker run -d --name web2 -p 81:80 itlinux/httpd-orange",
       "sudo docker run -d --name avi_test --restart=always -p 82:80 -e NOLOGO=yes -e APPLATENCY=no  itlinux/avi_web_container"
     ]
   }
